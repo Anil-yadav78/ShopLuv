@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <!-- bootstrap 5 cdn links  -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+     
+   <!-- favicon link -->
+   <link rel="icon" type="icon" href="">
+<!-- custuom css -->
+   <link rel="stylesheet" href="index css/printedcss/printed.css">
+   <!-- <link rel="stylesheet" href="index css/index.css"> -->
+   <!-- js link -->
+<link rel="js" href="js/printed.js">
+<style>
+.col-lg-3 .card-body a{
+    text-decoration: none;  
+    color: black;
+}
+.col-lg-4 .card{
+    border: none;
+}
+.col-lg-4 .card a img:hover{
+   padding:auto;
+}
+.col-lg-12 h4{
+    text-align: center;
+    font-size: 30px;
+}
+.col-lg-3 .card{
+    border: none;
+}
+.col-lg-6 .card{
+    border: none;
+}
+.col-lg-6 .card img{
+    height: 308px;
+}
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+.col-lg-4 .card{
+    overflow: hidden;
+}
+.col-lg-4 .card img{
+    transition:transform 0.3s;
+   
+}
+.col-lg-4 .card :hover img{
+    transform: scale(1.1);
+}
+.col-lg-3 .card{
+    overflow: hidden;
+}
+.col-lg-3 .card img{
+    transition:transform 1s;
+   
+}
+.col-lg-3 .card :hover img{
+    transform: scale(1.1);
+}
+.col-lg-6 .card{
+    overflow: hidden;
+}
+.col-lg-6 .card img{
+    /* transition:transform 1s; */
+    height:380px;
+   
+}
+.col-md-3 .card .card-body a{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+   
+}
+.col-md-3 .card .card-body p{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+   border-bottom: 1px solid black;
+}
+.col-lg-2 .card{
+border: none;
+}
+.col-lg-3 h5{
+color: white;
+margin-top: 20px;
+text-align:start;
+margin-left: 20px;
+padding: auto;
+}
+.col-lg-3 ul li a{
+    text-decoration: none;
+    color: white;
+    text-align: start;
+    
+}
+.col-lg-3 ul li a:hover{
+    color:orangered;
+}
+.col-lg-12 h5{
+    color: white;
+    text-align: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+footer{
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-area {
+  margin-top: 100px;
+  /* padding: 100px 0; */
+  background: #00030c;
+
+  background: linear-gradient(to right,  #00030c 0%,#000000 100%);
+  background-color: black;
+  color:#fff;
+  position:relative;
+}
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.single-footer {
+  width: 230px;
+}
+.single-footer:first-child {
+  width: 400px;
+}
+.single-footer h4 {
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.footer-social a {
+  color: #fff;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.footer-social {
+  margin-top: 20px;
+}
+.single-footer ul {
+  list-style: none;
+}
+.single-footer ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+.single-footer ul li a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.single-footer ul li a i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.copy {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+
+.footer-wave-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 45px;
+  right: 0;
+  width: 100%;
+  overflow:hidden;
+}
+.footer-wave {
+  background-image: url('img/footer-shapepng');
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200%;
+  background-size:50%;
+  background-position:bottom;
+  background-repeat:repeat-x;
+}
+
+
+
+@media only screen and (max-width:600px){
+  .main{
+    width:320px;
+  }
+  .footer-wave-box {
+    display: none;
+  }
+  .single-footer:first-child, .single-footer {
+    width: 100%;
+    margin-bottom:30px;
+  }
+}
+</style>
+</head>
+<body>
+    <!-- navbar section -->
+   
+
+
+ <header class="menu_wrapper">
+    <nav class="navbar navbar-expand-lg  bg-body-tertiary fixed-top">
+        <div class="container-fluid " style="height: 40px;">
+          <a class="navbar-brand" href="index.html" ><img width="50px" src="img/images.png">GLOBAl KART</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown dropdown-mega position-static">
+                    <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                      <h6>MEN</h6>
+                    </a>
+                    <div class="dropdown-menu ms-5">
+                     <div class="mega-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-4">
+                                    <h6>TopWear</h6>
+                                    <div class="list-group" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                                    <a class="list-group-item"  href="printed.html">Printed T-shirts</a>
+                                    <a class="list-group-item" href="printed.html">Oversized T-shirts</a>
+                                    <a class="list-group-item" href="tshirts.html">Plain T-shirts</a>
+                                    <a class="list-group-item" href="fashion.html">Fashion t-shirts</a>
+                                    <a class="list-group-item" href="menpolo.html">Polo T-shirts</a>
+                                    <a class="list-group-item" href="mshirts.html">shirts</a>
+                                    <a class="list-group-item" href="mvests.html">vests</a>
+                                    <a class="list-group-item" href="menhoddies.html">jackets & hoddies</a>
+                                    <a class="list-group-item" href="mensweater.html">Sweaters</a>
+                                    <a class="list-group-item" href="#">Customize T-shirts</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <h6>Bottom Wear</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="mjoggers.html">Joggers</a>
+                                    <a class="list-group-item" href="mjoggers.html">Pyjamas</a>
+                                    <a class="list-group-item" href="mjeans.html">Jeans & Denims</a>
+                                    <a class="list-group-item" href="men.html">All Bottomwear</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <h6>Winterwear</h6>
+                                    <div class="list-group">
+                                        <a class="list-group-item" href="menhoddies.html">Jackets</a>
+                                        <a class="list-group-item" href="mensweater.html">Sweaters</a>
+                                        <a class="list-group-item" href="mjoggers.html">Joggers</a>
+                                        <a class="list-group-item" href="men.html">Plus size</a>
+                                        <a class="list-group-item" href="menhoddies.html">Hoddies</a>
+                                        <!-- <h6>Sports & Activewear</h6>
+                                        <div class="list-group">
+                                            <a class="list-group-item" href="#">Sliders</a>
+                                        <a class="list-group-item" href="#">Clogs</a>
+                                        <a class="list-group-item" href="#">Casual Shoes</a>
+                                        <a class="list-group-item" href="#">sneakers</a>
+                                        <a class="list-group-item" href="#">Fromal Shoes</a> -->
+                                    </div>
+                                </div>
+                            
+  
+  
+                                <div class="col-lg-3 col-sm-3">
+                                    <h6>Footwear</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="men.html">Sliders</a>
+                                    <a class="list-group-item" href="men.html">Socks</a>
+                                    <a class="list-group-item" href="mensshoes.html">sneakers</a>
+                                    <a class="list-group-item" href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                  </li>
+  
+                  <!-- Women section -->
+                  <li class="nav-item dropdown dropdown-mega position-static">
+                    <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                   <h6>WOMEN</h6>
+                    </a>
+                    <div class="dropdown-menu ms-5">
+                     <div class="mega-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3">
+                                    <h6>TopWear</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item"  href="womenprinted.html">Printed T-shirts</a>
+                                    <a class="list-group-item" href="woversized.html">Oversized T-shirts</a>
+                                    <a class="list-group-item" href="womenprinted.html">Plain T-shirts</a>
+                                    <a class="list-group-item" href="women.html">shirts</a>
+                                    <a class="list-group-item" href="women.html">Tops</a>
+                                    <a class="list-group-item" href="women.html">jackets</a>
+                                    <a class="list-group-item" href="women.html">Sweaters</a>
+                                    <a class="list-group-item" href="womenprinted.html">Sweaters & hoddies</a>
+                                    <a class="list-group-item" href="womenprinted.html">Customize T-shirts</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3 ">
+                                    <h6>Bottom Wear</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="wjoggers.html">Joggers</a>
+                                    <a class="list-group-item" href="wjoggers.html">Pyjamas</a>
+                                    <a class="list-group-item" href="wjeans.html">Jeans & Denims</a>
+                                    <a class="list-group-item" href="wshorts.html">Shorts</a>
+                                    <a class="list-group-item" href="wjeans.html">Trousers & Pants</a>
+                                    <a class="list-group-item" href="women.html">All Bottomwear</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3 ">
+                                     <h6>Footwear</h6>
+                                        <div class="list-group">
+                                            <a class="list-group-item" href="women.html">Sliders</a>
+                                        <a class="list-group-item" href="women.html">Heal</a>
+                                        <a class="list-group-item" href="women.html">Casual Shoes</a>
+                                        <a class="list-group-item" href="women.html">sneakers</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <h6>Accessories</h6>
+                                    <div class="list-group">
+                                        <a class="list-group-item" href="women.html">Caps</a>
+                                        <a class="list-group-item" href="women.html">Masks</a>
+                                        <a class="list-group-item" href="women.html">Socks</a>
+                                        <a class="list-group-item" href="women.html">Phone Grippers</a>
+                                        <a class="list-group-item" href="women.html">Bags & backpacks</a>
+                                        </div>
+                                  
+  
+                                  
+                                </div>
+                               
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                  </li>
+                  <!-- women section exist -->
+                  <!-- kids section -->
+                  <li class="nav-item dropdown dropdown-mega position-static">
+                    <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        <h6>KIDS</h6>
+                    </a>
+                    <div class="dropdown-menu ms-5">
+                     <div class="mega-content px-md-4">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-2">
+                                    <h6>Boys clothing</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="kids.html">T-shirts</a>
+                                    <a class="list-group-item" href="kids.html">Shirts</a>
+                                    <a class="list-group-item" href="kids.html">Shorts</a>
+                                    <a class="list-group-item" href="kids.html">Jeans</a>
+                                    <a class="list-group-item" href="kids.html">Trousers</a>
+                                    <a class="list-group-item" href="kids.html">Clothing Sets</a>
+                                    <a class="list-group-item" href="kids.html">Ethnic Wear</a>
+                                    <a class="list-group-item" href="kids.html">Track Pants & Pyjamas</a>
+                                    <a class="list-group-item" href="kids.html">jacket</a>
+                                    <a class="list-group-item" href="kids.html">Partywear</a>
+                                    <a class="list-group-item" href="kids.html">Sweater & Sweatshirts</a>
+                                    <a class="list-group-item" href="kids.html">Innerwear</a>
+                                    <a class="list-group-item" href="kids.html">Nightwear</a>
+                                    <a class="list-group-item" href="kids.html">Loungewear</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3 ">
+                                    <h6>Girls Clothing</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="kids.html">Dresses</a>
+                                    <a class="list-group-item" href="kids.html">Tops</a>
+                                    <a class="list-group-item" href="kids.html">Tshirts</a>
+                                    <a class="list-group-item" href="kids.html">Clothing Sets</a>
+                                    <a class="list-group-item" href="kids.html">Lenhenga Choli</a>
+                                    <a class="list-group-item" href="kids.html">Kurts Sets</a>
+                                    <a class="list-group-item" href="kids.html">Party Wear</a>
+                                    <a class="list-group-item" href="kids.html">Skirts & Shorts</a>
+                                    <a class="list-group-item" href="kids.html">Jeans</a>
+                                    <a class="list-group-item" href="kids.html">Nightwear</a>
+                                    <a class="list-group-item" href="kids.html">Leggings</a>
+                                    <a class="list-group-item" href="kids.html">Innerwear</a>
+                                    <a class="list-group-item" href="kids.html">Thermals</a>
+                                    <a class="list-group-item" href="kids.html">Jumpsuits</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3 ">
+                                    <h6>Brands</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="kids.html">H&M</a>
+                                    <a class="list-group-item" href="kids.html">Max kids</a>
+                                    <a class="list-group-item" href="kids.html">Pantaloons</a>
+                                    <a class="list-group-item" href="kids.html">U.S. Polo Assn Kids</a>
+                                    <a class="list-group-item" href="kids.html">Mother care</a>
+                                    <p>Kids Accessories<p>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="kids.html">Bags & backpacks</a>
+                                    <a class="list-group-item" href="kids.html">Watches</a>
+                                    <a class="list-group-item" href="kids.html">Caps & Hats</a>
+                                    <a class="list-group-item" href="kids.html">Sunglasses</a>
+                                    <a class="list-group-item" href="kids.html">Masks</a>
+                                    <a class="list-group-item" href="kids.html">Jewellery</a>
+                                    <a class="list-group-item" href="kids.html">Hair accessory</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <h6>Footwear</h6>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="kids.html">Casual Shoes</a>
+                                    <a class="list-group-item" href="kids.html">Flipflops</a>
+                                    <a class="list-group-item" href="kids.html">Sporst Shoes</a>
+                                    <a class="list-group-item" href="kids.html">Flat</a>
+                                    <a class="list-group-item" href="kids.html">Sandals</a>
+                                    <a class="list-group-item" href="kids.html">Heels</a>
+                                    <a class="list-group-item" href="kids.html">School Shoes</a>
+                                    <a class="list-group-item" href="kids.html">Socks</a>
+  
+                                     <h4>Toys<h4>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="kids.html">Learning & Development</a>
+                                    <a class="list-group-item" href="kids.html">Activity Toys</a>
+                                    <a class="list-group-item" href="kids.html">Soft Toys</a>
+                                    <a class="list-group-item" href="kids.html">Action Figure</a>
+                                    <a class="list-group-item" href="kids.html">Play Set</a>
+                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                  </li>
+                  <!-- Kids section Exit -->
+                  <!-- Electronics Section -->
+                  <!-- <li class="nav-item dropdown dropdown-mega position-static">
+                    <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                     <h6>ELectronics</h6>
+                    </a>
+                    <div class="dropdown-menu ms-5">
+                     <div class="mega-content px-md-4">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 p-auto">
+                                    <h5>Laptops</h5>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="glap.html">Gaming Laptops</a>
+                                    <a class="list-group-item" href="#">Desktop Pc</a>
+                                    <a class="list-group-item" href="#">Gaming & Accessories</a>
+                                    <a class="list-group-item" href="#">Computer Accessories</a>
+                                    <a class="list-group-item" href="#">External Hard Disk</a>
+                                    <a class="list-group-item" href="#">Pendrives</a>
+                                    <a class="list-group-item" href="#">Laptop Bags</a>
+                                    <a class="list-group-item" href="#">Moniters</a>
+                                    <a class="list-group-item" href="#">Tablets</a>
+                                    <a class="list-group-item" href="#">Apple iPads</a>
+                                    <a class="list-group-item" href="#">Mouse</a>
+                                    <a class="list-group-item" href="#">Laptop skins</a>
+                                    <a class="list-group-item" href="#">Printers</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <h5>Moblies</h5>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="#">Apple</a>
+                                    <a class="list-group-item" href="#">Mi</a>
+                                    <a class="list-group-item" href="#">Realme</a>
+                                    <a class="list-group-item" href="#">IQOO 3</a>
+                                    <a class="list-group-item" href="#">iPhone SE</a>
+                                    <a class="list-group-item" href="#">Motorolazzar</a>
+                                    <a class="list-group-item" href="#">realme Narzo</a>
+                                    <a class="list-group-item" href="#">Infix Hot 9</a>
+                                    <a class="list-group-item" href="#">Oppo</a>
+                                    <a class="list-group-item" href="#">Vivo</a>
+                                    <a class="list-group-item" href="#">Asus</a>
+                                    <a class="list-group-item" href="#">Honor</a>
+                                    <a class="list-group-item" href="#">Infinix</a>
+                                    <a class="list-group-item" href="#">Samsung</a>
+                                    <a class="list-group-item" href="#">Poco X2</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <h5>Moblie Accessories</h5>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="#">Moblie Cases</a>
+                                    <a class="list-group-item" href="#">Power Banks</a>
+                                    <a class="list-group-item" href="#">Memory Card</a>
+                                    <a class="list-group-item" href="#">Smart Headphones</a>
+                                    <a class="list-group-item" href="#">Mobile Cables</a>
+                                    <a class="list-group-item" href="#">Screengaurds</a>
+                                    <a class="list-group-item" href="#">Mobile Chargers</a>
+                                    <a class="list-group-item" href="#">Smart Glasses VR</a>
+                                    <a class="list-group-item" href="#">Smart Bands</a>
+                                    <a class="list-group-item" href="#">Mobile Holders</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <h5>Smart Home</h5>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="#">Home Audio Speakers</a>
+                                    <a class="list-group-item" href="#">Home THeaters</a>
+                                    <a class="list-group-item" href="#">Soundbars</a>
+                                    <a class="list-group-item" href="#">Bluetooth Speakers</a>
+                                    <a class="list-group-item" href="#">DTH Set Top Box</a>
+                                    <a class="list-group-item" href="#">Google Nest</a>
+                                    <p>Camera<p>
+                                    <div class="list-group">
+                                    <a class="list-group-item" href="#">DSLR & Mirrorless</a>
+                                    <a class="list-group-item" href="#">Sports & Action</a>
+                                    <a class="list-group-item" href="#">Compact & BRidege Camers</a>
+                                    <a class="list-group-item" href="#">Lens</a>
+                                    <a class="list-group-item" href="#">Tripods</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                  </li> -->
+                  <!-- Home & Living Section -->
+              <!-- <li class="nav-item dropdown dropdown-mega position-static">
+                <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    <h6>Home & Living</h6>
+                </a>
+                <div class="dropdown-menu ms-5">
+                 <div class="mega-content px-md-4">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-3">
+                                <h6>Bed & Furnishing</h6>
+                                <div class="list-group">
+                                <a class="list-group-item" href="#">Bed Runners</a>
+                                <a class="list-group-item" href="#">Mattress Protectors</a>
+                                <a class="list-group-item" href="#">BedSets</a>
+                                <a class="list-group-item" href="#">BedSheets</a>
+                                <a class="list-group-item" href="#">Bed Covers</a>
+                                <a class="list-group-item" href="#">Diwan Sets</a>
+                                <a class="list-group-item" href="#">Pillows Cover</a>
+                                <a class="list-group-item" href="#">Sofa Covers</a>
+                                <a class="list-group-item" href="#">Blankets</a>
+                                <a class="list-group-item" href="#">Quits & Dohars</a>
+                                    <a class="list-group-item" href="#">Floor Runners</a>
+                                    <a class="list-group-item" href="#">Carpets</a>
+                                    <a class="list-group-item" href="#">Door Mats</a>
+                                    <a class="list-group-item" href="#">Floor Mates Dhurries</a>
+                                </div>
+                           
+                
+                                
+                            </div>
+                            <div class="col-lg-3 col-sm-3">
+                                <h5>Home Decor</h5>
+                                <div class="list-group">
+                                <a class="list-group-item" href="#">Plants & Planters</a>
+                                <a class="list-group-item" href="#">Aromas</a>
+                                <a class="list-group-item" href="#">Candles</a>
+                                <a class="list-group-item" href="#">Clocks</a>
+                                <a class="list-group-item" href="#">Mirrors</a>
+                                <a class="list-group-item" href="#">Wall Decor</a>
+                                <a class="list-group-item" href="#">Festive Decor</a>
+                                <a class="list-group-item" href="#">Candles</a>
+                                <a class="list-group-item" href="#">Wall Shelves</a>
+                                <a class="list-group-item" href="#">Ottoman</a>
+                                <a class="list-group-item" href="#">Pooja Essentials</a>
+                                <a class="list-group-item" href="#">Fountains</a>
+                                <a class="list-group-item" href="#">Showpices Vases</a>
+                               
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-3">
+                                <h5>Bath</h5>
+                                <div class="list-group">
+                                <a class="list-group-item" href="#">Bath Towels</a>
+                                <a class="list-group-item" href="#">Beach Towels</a>
+                                <a class="list-group-item" href="#">Bath Rugs</a>
+                                <a class="list-group-item" href="#">Shower Curtains</a>
+                                <a class="list-group-item" href="#">Bath Robes</a>
+                                <a class="list-group-item" href="#">Towels Sets</a>
+                                </div>
+  
+                                <p>Lamps & Lighting<p>
+                                <div class="list-group">
+                                <a class="list-group-item" href="#">Floor Lamps</a>
+                                <a class="list-group-item" href="#">Ceiling Lamps</a>
+                                <a class="list-group-item" href="#">String Lights</a>
+                                <a class="list-group-item" href="#">Outdoor Lamps</a>
+                                <a class="list-group-item" href="#">Wall Lamps</a>
+                                <a class="list-group-item" href="#">Table Lamps</a>
+                               
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-3">
+                                <h5>Brands</h5>
+                                <div class="list-group">
+                                <a class="list-group-item" href="#">H&M</a>
+                                <a class="list-group-item" href="#">Marks & Spencer</a>
+                                <a class="list-group-item" href="#">Home Center</a>
+                                <a class="list-group-item" href="#">Spaces</a>
+                                <a class="list-group-item" href="#">D Decore</a>
+                                <a class="list-group-item" href="#">Story@Home</a>
+                                <a class="list-group-item" href="#">Swayam</a>
+                                <a class="list-group-item" href="#">Maspar</a>
+                                <a class="list-group-item" href="#">Pure Home Living</a>
+                                <a class="list-group-item" href="#">Trident</a>
+                                <a class="list-group-item" href="#">ROMEE</a>
+                                <a class="list-group-item" href="#">Random</a>
+                                <a class="list-group-item" href="#">Cortina</a>
+                                <a class="list-group-item" href="#">Raymond Home</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              </li> -->
+              <!-- Home & Living Section Exit -->
+            </ul>
+            <!-- Search Bar SEction -->
+            
+            <form class="d-flex me-auto"  role="search">
+    
+                <input class="form-control " type="search" placeholder="Search"  aria-label="Search">
+            
+                <div class="user d-inlineblock ms-2 mb- mt-1">  <i class="fa-solid fa-magnifying-glass fa-xl"></i></div>
+                
+              </form>
+  
+        <!-- login section -->
+  
+       <!-- <div class="nav-link2 mt-0 me-3"><a href="login.html"><h5>Login</h5></a></div>s -->
+       <div class="user d-inlineblock me-4 mb-2"><a href="login.html"><i class="fa-solid fa-user fa-xl"></i></a></div>
+       <div class="user d-inlineblock me-4 mb-1 mt-"><a href="#"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
+       <div class="user d-inlineblock me- mb-1 mt-3"><a href="#"><p><i class="fa-solid fa-heart fa-xl"></i></p></a></div>
+  
+  
+        <!-- login section exit -->
+          </div>
+        </div>
+      </nav>
+  </header>
+  <!-- header section exit -->
+  
+
+<!-- second nav section -->
+<nav class="navbar navbar-expand-lg bg-danger mt-5 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <!-- top wear section -->
+            <li class="nav-item dropdown dropdown-mega  position-static ms-5 mt-3">
+                <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    <h5>Top wear</h5>
+                </a>
+                <div class="dropdown-menu ms-5">
+                 <div class="mega-content ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-3">
+                                <div class="list-group">
+                                    <a class="list-group-item"  href="womenprinted.html">shirts</a>
+                                    <a class="list-group-item" href="woversized.html">Oversized T-shirts</a>
+                                    <a class="list-group-item" href="">Tops</a>
+                                    <a class="list-group-item" href="#">Dresses</a>
+                                    <a class="list-group-item" href="#">co-ord sets</a>
+                                   
+                                </div>
+                            </div>   
+                            <div class="col-lg-6 col-sm-3">
+                                <div class="list-group">
+                                    <a class="list-group-item" href="#">topwear</a>
+                                    <a class="list-group-item" href="#">jackets</a>
+                                    <a class="list-group-item" href="#">Sweaters</a>
+                                    <a class="list-group-item" href="#"> hoddies</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              </li>
+              <!-- top wear section exit -->
+              <!-- bottom wear section  -->
+              <li class="nav-item dropdown dropdown-mega position-static ms-5 mt-3 ">
+                <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    <h5>Bottom wear</h5>
+                </a>
+                <div class="dropdown-menu ms-5">
+                 <div class="mega-content ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-3">
+                                <div class="list-group">
+                                    <a class="list-group-item" href="wjoggers.html">Joggers</a>
+                                    <a class="list-group-item" href="#">Pyjamas</a>
+                                    <a class="list-group-item" href="wjeans.html">Jeans & Denims</a>
+                                    <a class="list-group-item" href="wshorts.html">Shorts</a>
+                                    <a class="list-group-item" href="#">Activewear Joggers</a>
+                                    <a class="list-group-item" href="#">Plus size Bottomwear</a>
+                                    <a class="list-group-item" href="#">All Bottomwear</a>
+                                  
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-3">
+                                <div class="list-group">
+                                    <a class="list-group-item" href="#">Trunks</a>
+                                    <a class="list-group-item" href="#">Trousers & Pants</a>
+                                    <a class="list-group-item" href="#">Activewear Shorts</a>
+                            
+                                </div>
+                            </div>
+                           
+                           
+                          
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              </li>
+              <!-- bottom wear exit -->
+              <!-- collection section -->
+              <li class="nav-item dropdown dropdown-mega ms-5 mt-3">
+                <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h5>Collection</h5>
+                </a>
+                <div class="dropdown-menu ms-5 ">
+                 <div class="mega-content ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-3">
+                                <div class="list-group">
+                                    <a class="list-group-item"  href="womenprinted.html">Printed T-shirts</a>
+                                    <a class="list-group-item" href="woversized.html">Oversized T-shirts</a>
+                                    <a class="list-group-item" href="wshorts.html">Shorts</a>
+                                    <a class="list-group-item" href="wjeans.html">Jeans</a>
+                                    <a class="list-group-item" href="wjoggers.html">Joggers</a>
+                                    <a class="list-group-item" href="#">Full Sleeve T-shirts</a>
+                                    <a class="list-group-item" href="#">Half Sleeve T-shirts</a>
+                                    <a class="list-group-item" href="#">Polo T-shirts</a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              </li>
+              <!-- collection section exit -->
+              <!-- shoes -->
+              <li class="nav-item dropdown dropdown-mega ms-5 mt-3">
+                <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h5>Shoes</h5>
+                </a>
+                <div class="dropdown-menu ms-5">
+                 <div class="mega-content ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-6">
+                                <div class="list-group">
+                                    <a class="list-group-item" href="#">Sliders</a>
+                                    <a class="list-group-item" href="#">Clogs</a>
+                                    <a class="list-group-item" href="#">Casual Shoes</a>
+                                    <a class="list-group-item" href="#">sneakers</a>
+                                    <a class="list-group-item" href="#">Fromal Shoes</a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              </li>
+              <!-- shoes exit -->
+              <!-- Accessories -->
+              <li class="nav-item dropdown dropdown-mega ms-5 mt-3">
+                <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h5>Accessories</h5>
+                </a>
+                <div class="dropdown-menu ms-5">
+                 <div class="mega-content ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-6">
+                                <div class="list-group">
+                                    <a class="list-group-item" href="#">Caps</a>
+                                        <a class="list-group-item" href="#">Masks</a>
+                                        <a class="list-group-item" href="#">Socks</a>
+                                        <a class="list-group-item" href="#">Phone Grippers</a>
+                                        <a class="list-group-item" href="#">Bags & backpacks</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                </li>
+<!-- accessiroes exit -->
+<!-- bascis -->
+<li class="nav-item dropdown dropdown-mega ms-5 mt-3">
+    <a class="nav-link" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <h5>Basics</h5>
+    </a>
+    <div class="dropdown-menu ms-5">
+     <div class="mega-content ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-sm-6">
+                    <div class="list-group">
+                        <a class="list-group-item" href="#">Caps</a>
+                            <a class="list-group-item" href="#">Masks</a>
+                            <a class="list-group-item" href="#">Socks</a>
+                            <a class="list-group-item" href="#">Phone Grippers</a>
+                            <a class="list-group-item" href="#">Bags & backpacks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+  </li>
+<!-- basic exit -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- second nav exit -->
+
+
+
+
+
+
+
+<!-- carusol section -->
+
+
+<div class="container-fluid ">
+    <div class="row py-3">
+        <div class="col">
+            <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="img/women/Homepage_1_r5Emro4.webp" class="d-block w-100" style="height:400px;"></a>
+                     </div>
+                     
+                        <div class="carousel-item active" data-bs-interval="3000">
+                           <img src="img/women/Web-banner1_fUlX007.webp" class="d-block w-100" style="height:400px;"></a>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                           <img src="img/women/Web-Banner_5.webp" class="d-block w-100" style="height: 400px;"></a> 
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="img/women/Homepage--Banner_3_VJqFpp3.webp" class="d-block w-100" style="height: 400px;"></a> 
+                      </div>
+
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="img/women/Homepage_1.webp" class="d-block w-100" style="height: 400px;"></a>
+                     </div>
+                </div>
+                <!-- <ol class="carousel-indicators">
+                    <li data-bs-target="#mycarousel" data-bs-slide-to="" class="active"></li>
+                    <li data-bs-target="#mycarousel" data-bs-slide-to=""></li>
+                    <li data-bs-target="#mycarousel" data-bs-slide-to=""></li>
+                </ol> -->
+  
+                <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                
+                <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next"><span class="carousel-control-next-icon"></span></a>
+            </div>
+    </div>
+  </div> 
+  
+    
+
+  
+<!-- carusol section exit -->
+<!-- collection section  -->
+<div class="container-fluid mt-4">
+    <div class="row">
+       <div class="col-lg-12">
+        <h4>COLLECTIONS</h4>
+       </div>
+    </div>
+</div>
+
+<div class="container-fluid text-center mt-5">
+    <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel-2" class="carousel slide third-1" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item item1 active">
+                    <div class="col-md-4 ms-3">
+                        <div class="card">
+                            <div class="card-img">
+                              <a href="#"><img src="img/women/b2.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item1">
+                    <div class="col-md-4 ms-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/All-new-OST-Collection-tiles.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item1">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/b3.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item1">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/Black---Shop-By-Color_yO6tIub.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item1">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img width="" src="img/women/Jeans_t2E7pQH.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item1">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/b4.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel-2" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel-2" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+
+</div> 
+<!-- collection exit -->
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>CATEGORIES</h4>
+        </div>
+    </div>
+</div>
+
+<!-- product cards section -->
+
+
+
+<div class="container-fluid mt-5">
+    <div class="row">
+       <div class="col-lg-4">
+        <div class="card">
+            <a href="#"> <img src="img/women/Co-ord-sets_T677bSr.webp" class="card-fluid" alt="..."></a>
+        </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <a href="#"> <img src="img/women/Oversized-T-shirts_EwnP7Lf.webp" class="card-fluid" alt="..."></a>
+            </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card">
+                    <a href="#"> <img src="img/women/Tops_hDj48Im.webp" class="card-fluid"alt="..."></a>
+                </div>
+                </div>
+
+            
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <a href="#"> <img src="img/women/Shirts_RpIl8fr.webp" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    
+            <div class="col-lg-4">
+                <div class="card">
+                    <a href="#"> <img src="img/women/Boyfriend-T-shirts_XLR2FzJ.webp" class="card-img" alt="..."></a>
+                </div>
+                </div>
+    
+                <div class="col-lg-4">
+                    <div class="card">
+                        <a href="#"> <img src="img/women/Cargo-_-Joggers_Cm7qej4.webp" class="card-img" alt="..."></a>
+                    </div>
+                    </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid mt-3">
+    <div class="row">
+
+        <div class="col-lg-3">
+            <div class="card">
+                <a href="#"> <img src="img/women/Dresses_CwhdEMH.webp" class="card-img" alt="..."></a>
+            </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="card">
+                    <a href="#"> <img src="img/women/Lounge-Bralettes_Y1XNUi2.webp" class="card-img" alt="..."></a>
+                </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card">
+                        <a href="#"> <img src="img/women/Innerwear_zfAuuoJ.webp" class="card-img" alt="..."></a>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <a href="#"> <img src="img/women/Shoes_90J6dUA.webp" class="card-img" alt="..."></a>
+                        </div>
+                        </div>
+    </div>
+</div>
+<!-- catergiroe exit -->
+
+<!-- TOO HOT TO BE MISSED -->
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4> TOO HOT TO BE MISSED</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <a href="printed.html"> <img src="img/women/o.jpg" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    
+            <div class="col-lg-6">
+                <div class="card">
+                    <a href="printed.html"> <img src="img/women/2.webp" class="card-img" alt="..."></a>
+                </div>
+                </div>
+    
+        
+    </div>
+</div>
+
+<!-- product exit -->
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>TRENDING CATEGORIES</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="card">
+                <a href="#"> <img src="img/women/category-box-Joggers-Women-1682055633.webp" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    
+            <div class="col-lg-2">
+                <div class="card">
+                    <a href="#"> <img src="img/women/category-box-new-240x350-women-cords-1686063032.jpg" class="card-img" alt="..."></a>
+                </div>
+                </div>
+    
+                <div class="col-lg-2">
+                    <div class="card">
+                        <a href="#"> <img src="img/women/category-box-new-240x350-women-jeans-1686063033.jpg" class="card-img" alt="..."></a>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <a href="#"> <img src="img/women/category-box-new-240x350-women-pjs-1686063033.jpg" class="card-img" alt="..."></a>
+                        </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="card">
+                                <a href="#"> <img src="img/women/category-box-new-240x350-women-shorts-1686063034.jpg" class="card-img" alt="..."></a>
+                            </div>
+                            </div>
+        
+                            <div class="col-lg-2">
+                                <div class="card">
+                                    <a href="#"> <img src="img/women/category-box-new-240x350-women-sweaters-1686063034.jpg" class="card-img" alt="..."></a>
+                                </div>
+                                </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="card">
+                <a href="#"> <img src="img/women/category-box-new-D-240x350-fashion-tops-1686305660.webp" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    
+            <div class="col-lg-2">
+                <div class="card">
+                    <a href="#"> <img src="img/women/category-box-new-D-240x350-printed-tees-w-1685445851.webp" class="card-img" alt="..."></a>
+                </div>
+                </div>
+    
+                <div class="col-lg-2">
+                    <div class="card">
+                        <a href="#"> <img src="img/women/category-box-new-D-240x350-WOMEN-BoyfriendTeess-1681730084.webp" class="card-img" alt="..."></a>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <a href="#"> <img src="img/women/category-box-new-D-240x350-WOMEN-Dresses-1681725004.webp" class="card-img" alt="..."></a>
+                        </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="card">
+                                <a href="#"> <img src="img/women/category-box-new-women-combos--1--1684307619.webp" class="card-img" alt="..."></a>
+                            </div>
+                            </div>
+        
+                            <div class="col-lg-2">
+                                <div class="card">
+                                    <a href="#"> <img src="img/women/category-box-Oversized-tshirts-Women-1682055634.webp" class="card-img" alt="..."></a>
+                                </div>
+                                </div>
+    </div>
+</div>
+
+
+<!-- Shop with color -->
+
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>SHOP WITH COLOR</h4>
+        </div>
+    </div>
+</div>
+
+
+   
+<div class="container-fluid text-center mt-5">
+    <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel-4" class="carousel slide five-1" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item item4 active">
+                    <div class="col-md-4 ms-3">
+                        <div class="card">
+                            <div class="card-img">
+                              <a href="#"><img src="img/women/White---Shop-By-colors_iCe3Fio.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item4">
+                    <div class="col-md-4 ms-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/Blue---shop-by-colous_d5z0mio.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item4">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/Shop-By-Color-Yellow2_OPXGa7f.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item4">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/Black---Shop-By-Color_yO6tIub.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item4">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img width="" src="img/women/Shop-By-Color-Green2_yleNygX.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item item4">
+                    <div class="col-md-4 ms-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <a href="#"><img src="img/women/SQ-Adhn.webp" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel-4" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel-4" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+
+</div> 
+
+
+<!-- shop with color exit -->
+<!-- marchnidise -->
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>OUR BEST PICKS</h4>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <a href="#"> <img src="img/women/11.webp" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    
+            <div class="col-lg-6">
+                <div class="card">
+                    <a href="#"> <img src="img/women/22.webp" class="card-img" alt="..."></a>
+                </div>
+                </div>
+    
+        
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid mt-2">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <a href="#"> <img src="img/women/33.gif" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    
+            <div class="col-lg-6">
+                <div class="card">
+                    <a href="#"> <img src="img/women/plus-size-women-1683622045.webp" class="card-img" alt="..."></a>
+                </div>
+                </div>
+    
+        
+    </div>
+</div>
+<!-- OUR BEST PICKS exit -->
+<!-- top selling -->
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>TOP SELLING</h4>
+        </div>
+    </div>
+</div>
+
+
+<!-- carousal -->
+
+
+<div class="container-fluid text-center mt-5">
+    <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel-5" class="carousel slide six-1" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item item5 active">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Top-Selling-Tile-Burgundy_xxjfQ5V.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Solid : Burgundy</h6></a>
+                              <a href="#"> <p class="card-text">Women Dresses<br>$1999</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="carousel-item item5">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Top-Selling-Tile-fierce3_5coho7N.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Mulan : Fierce</h6></a>
+                              <a href="#"> <p class="card-text">Women Oversized T-shirts<br>$799</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="carousel-item item5">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Top-Selling-Tile-hot-pink_MYhY6Kv.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Solid : Hot Pink</h6></a>
+                              <a href="#"> <p class="card-text">Women Cropped Polo<br>$599</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="carousel-item item5">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Top-Selling-Tile-Paradise-Play_5hi133E.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Parachute Pants : Paradise Play</h6></a>
+                              <a href="#"> <p class="card-text">Women Pants<br>$899</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="carousel-item item5">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Top-Selling-lime-barbie_1_dV4Na5r.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Solid : Lime Punch</h6></a>
+                              <a href="#"> <p class="card-text">Women Boyfriend Shirts<br>$1200</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="carousel-item item5">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Top-Selling-Tile-calming-sunset_xONqKm0.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Original : Claming Sunset set</h6></a>
+                              <a href="#"> <p class="card-text">Women's co-ord Sets<br>$2149</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item item5">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Top-Selling-Tile-apple-mint_JC6sXfG.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Solids : Apple Mint</h6></a>
+                              <a href="#"> <p class="card-text">Women PlaySuit<br>$999</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item item5">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="card" style="width: 19rem;">
+                           <a href="#"><img src="img/women/Solids-Black-Straight-fitTop-Selling-Tile_fbwqn5V.webp" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                              <a href="#"><h6 class="card-title">Solid : Black (Straight Fit)</h6></a>
+                              <a href="#"> <p class="card-text">Women Carogo Jeans<br>$599</p></a>
+                              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel-5" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel-5" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+
+</div> 
+
+
+<!-- top selling exit -->
+
+
+
+
+
+
+
+<!-- trending catergi -->
+
+
+
+
+<!-- banner -->
+
+
+
+
+
+
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <a href="printed.html"> <img src="img/women/Desktop-Strip-1-1672040128.webp" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <a href="printed.html"> <img src="img/men/Desktop-Strip-3-1669022420.jpg" class="card-img" alt="..."></a>
+            </div>
+            </div>
+    </div>
+</div>
+<!-- banner exit -->
+<!-- footer -->
+
+<footer class="footer-area">
+    <div class="footer-wave-box">
+        <div class="footer-wave footer-animation"></div>
+    </div>
+    <div class="main">
+        <div class="footer">
+            <div class="single-footer">
+                <h4>about us</h4>
+                <p>Lorem ipsum dolor sit amet, di dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Excepteur sint qui officia deserunt Excepteur.</p>
+                <div class="footer-social">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="single-footer">
+                <h4>main menu</h4>
+                <ul>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> home</a></li>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> about us</a></li>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> services</a></li>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> gallery</a></li>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> contact us</a></li>
+                </ul>
+            </div>
+            <div class="single-footer">
+                <h4>quick links</h4>
+                <ul>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> privacy policy</a></li>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> terms & conditions</a></li>
+                    <li><a href=""><i class="fas fa-chevron-right"></i> disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="single-footer">
+                <h4>contact us</h4>
+                <ul>
+                    <li><a href=""><i class="fas fa-map-marker-alt"></i>india delhi 0001</a></li>
+                    <li><a href=""><i class="fas fa-mobile-alt"></i> +00 0123 456 789</a></li>
+                    <li><a href=""><i class="far fa-envelope"></i> info@globalkart.com</a></li>
+                    <li><a href=""><i class="fas fa-globe-europe"></i> www.globalkart.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2023 GLOBAL KART all rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        let items = document.querySelectorAll('.third-1 .item1')
+
+items.forEach((el) => {
+    const minPerSlide = 3
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+        	next = items[0]
+      	}
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+})
+
+    </script>
+
+    
+<script>
+    let items1 = document.querySelectorAll('.second-2 .item2')
+
+items1.forEach((el) => {
+const minPerSlide = 5
+let next1 = el.nextElementSibling
+for (var i=1; i<minPerSlide; i++) {
+    if (!next1) {
+        // wrap carousel by using first child
+        next1 = items1[0]
+      }
+    let cloneChild = next1.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next1 = next1.nextElementSibling
+}
+})
+
+</script> 
+
+
+
+
+    
+<script>
+    let items2 = document.querySelectorAll('.five-1 .item4')
+
+items2.forEach((el) => {
+const minPerSlide = 3
+let next2 = el.nextElementSibling
+for (var i=1; i<minPerSlide; i++) {
+    if (!next2) {
+        // wrap carousel by using first child
+        next2 = items2[0]
+      }
+    let cloneChild = next2.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next2 = next2.nextElementSibling
+}
+})
+
+</script> 
+
+
+
+   
+<script>
+    let items3 = document.querySelectorAll('.six-1 .item5')
+
+items3.forEach((el) => {
+const minPerSlide = 4
+let next3 = el.nextElementSibling
+for (var i=1; i<minPerSlide; i++) {
+    if (!next3) {
+        // wrap carousel by using first child
+        next3 = items3[0]
+      }
+    let cloneChild = next3.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next3 = next3.nextElementSibling
+}
+})
+
+</script> 
+
+      <!-- bootstrap 5 cdn link -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
